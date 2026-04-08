@@ -20,7 +20,7 @@ export default function FranchiseSection() {
         {/* Center */}
         <div className="relative w-full h-[250px] md:h-[300px]">
           <Image
-            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
+            src="/franchise_building.png"
             alt="Restaurant Exterior"
             fill
             className="object-cover rounded-[12px]"

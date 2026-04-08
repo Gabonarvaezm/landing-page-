@@ -13,7 +13,7 @@ export default function WaysToEnjoy() {
             <div className="relative w-[300px] h-[300px] md:w-[340px] md:h-[340px]">
               <div className="w-full h-full rounded-full overflow-hidden">
                 <Image
-                  src="https://picsum.photos/seed/pizzacircle/600/600"
+                  src="/ways_round_pizza.png"
                   alt="Crust Pizza Co. pizza"
                   fill
                   className="object-cover"

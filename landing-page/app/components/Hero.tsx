@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="mx-4 md:mx-10 my-4 relative h-[320px] md:h-[420px] rounded-xl overflow-hidden">
       <Image
-        src="https://picsum.photos/seed/pizza-hero/1200/500"
+        src="/hero_pizza_hands.png"
         alt="Hands reaching for pizza slices on a wooden table"
         fill
         className="object-cover"

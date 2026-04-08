@@ -2,28 +2,28 @@ import Image from "next/image";
 
 const menuItems = [
   {
-    seed: "chickenparm",
+    imageSrc: "/menu_chicken_parm.png",
     title: "Chicken Parm",
     desc: "Tender chicken, rich marinara, melted mozzarella on our signature crust.",
     badge: "20",
     price: "$14.99",
   },
   {
-    seed: "alfredo99",
+    imageSrc: "/menu_alfredo.png",
     title: "Chicken Alfredo",
     desc: "Creamy alfredo sauce, grilled chicken, and fresh parmesan cheese blend.",
     badge: "18",
     price: "$15.99",
   },
   {
-    seed: "spaghetti77",
+    imageSrc: "/menu_spaghetti.png",
     title: "Spaghetti & Meatballs",
     desc: "Classic comfort food with house-made meatballs and slow-cooked tomato sauce.",
     badge: "22",
     price: "$13.99",
   },
   {
-    seed: "macncheese55",
+    imageSrc: "/menu_chicken_parm.png",
     title: "Baked Mac & Cheese",
     desc: "Four-cheese blend, golden breadcrumb topping, baked until bubbly perfection.",
     badge: "16",
@@ -39,10 +39,10 @@ export default function MenuSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {menuItems.map((item) => (
-            <div key={item.seed} className="bg-white rounded-lg overflow-hidden">
+            <div key={item.title} className="bg-white rounded-lg overflow-hidden">
               <div className="relative aspect-square">
                 <Image
-                  src={`https://picsum.photos/seed/${item.seed}/400/400`}
+                  src={item.imageSrc}
                   alt={item.title}
                   fill
                   className="object-cover"
