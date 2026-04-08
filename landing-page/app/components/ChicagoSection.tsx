@@ -29,55 +29,56 @@ const iconBoxes = [
 
 export default function ChicagoSection() {
   return (
-    <section className="py-16 px-4 md:px-10 bg-white">
+    <section className="py-20 px-4 md:px-10 bg-transparent border-b border-black/5">
       <div className="max-w-[1100px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1.2fr] gap-8 items-center">
 
-          {/* Left */}
-          <div>
-            <h2 className="text-[1.75rem] font-extrabold uppercase leading-tight mb-4">
-              Home of the<br />Chicago-Style<br />Thin Crust Pizza
+          {/* Left Text */}
+          <div className="pr-4">
+            <h2 className="text-[2rem] font-[900] uppercase leading-[1.05] tracking-[-1px] mb-6">
+              HOME OF THE<br />CHICAGO-STYLE<br />THIN CRUST PIZZA
             </h2>
-            <p className="text-[0.875rem] text-[#666] leading-relaxed mb-6">
-              We&apos;ve been crafting authentic Chicago-style thin crust pizzas for over two decades.
-              Every pie is made from scratch using locally sourced ingredients, hand-stretched dough,
-              and our signature sauce recipe passed down through generations. Come taste the difference
-              that real passion makes.
+            <p className="text-[0.8rem] text-[#666] leading-relaxed mb-6 font-[500]">
+              Uervicoa tes tria sosiven a eosmct stive to ponit dote-tiovne oxrch cino is teenresest is tois neo meleeq bresses thenre lered peavisiee iudi-sueonni yileas.
             </p>
-            <div className="flex items-center gap-6">
-              <a href="#" className="inline-block bg-[#F47B20] hover:bg-[#d96a10] text-white font-bold text-[0.8rem] uppercase tracking-wide px-6 py-2.5 rounded-full transition-colors">
-                Learn More
+            <div className="flex items-center gap-6 mt-8">
+              <a href="#" className="inline-block bg-[#F47B20] hover:bg-[#d96a10] text-white font-[800] text-[0.75rem] uppercase px-6 py-2.5 rounded-[50px] transition-colors shadow-md">
+                LEARN MORE
               </a>
-              <a href="#" className="text-[0.75rem] font-bold uppercase tracking-wide text-[#1A1A1A] hover:text-[#F47B20] transition-colors">
-                See Locations
+              <a href="#" className="text-[0.75rem] font-[800] uppercase text-[#1A1A1A] hover:text-[#F47B20] transition-colors">
+                SEE LOCATIONS
               </a>
             </div>
           </div>
 
-          {/* Right */}
-          <div>
-            <div className="grid grid-cols-3 gap-2.5">
+          {/* Center Grid of Icons */}
+          <div className="grid grid-cols-3 gap-x-4 gap-y-6">
               {iconBoxes.map((box) => (
-                <div key={box.label} className="bg-[#F5F2EE] rounded-lg p-3 flex flex-col items-center gap-1.5 text-center">
-                  <svg className="w-7 h-7 fill-[#F47B20]" viewBox="0 0 24 24">{box.svg}</svg>
-                  <span className="text-[0.6rem] font-bold uppercase leading-tight">{box.label}</span>
+                <div key={box.label} className="flex flex-col items-center gap-2">
+                  <div className="bg-[#F47B20] rounded-[10px] p-4 flex items-center justify-center shadow-lg w-16 h-16 hover:scale-105 transition-transform cursor-pointer">
+                    <svg className="w-8 h-8 fill-white" viewBox="0 0 24 24">{box.svg}</svg>
+                  </div>
+                  <span className="text-[0.55rem] font-[800] text-[#1A1A1A] uppercase leading-tight text-center tracking-tight w-16">
+                    {box.label}
+                  </span>
                 </div>
               ))}
             </div>
 
-            {/* Polaroids */}
-            <div className="relative h-40 mt-5">
-              <div className="absolute left-4 top-0 bg-white p-2 pb-7 shadow-lg rotate-[-4deg] z-10 w-28">
-                <div className="absolute top-[-7px] left-1/2 -translate-x-1/2 w-9 h-3 bg-yellow-200/80 rounded-sm" />
-                <div className="relative w-full h-20">
-                  <Image src="https://picsum.photos/seed/staff1/200/200" alt="Restaurant staff" fill className="object-cover" />
-                </div>
+          {/* Right Polaroids */}
+          <div className="relative h-64 md:h-72 mt-8 lg:mt-0 flex justify-end">
+            <div className="absolute left-0 lg:-left-4 top-4 bg-white p-3 pb-12 shadow-[0_10px_25px_rgba(0,0,0,0.15)] rotate-[-6deg] z-10 w-40 md:w-48 transition-transform hover:z-30 hover:rotate-0">
+              <div className="absolute top-[-10px] left-[-10px] w-14 h-4 bg-[#D1C2A5]/90 -rotate-45 shadow-sm" />
+              <div className="absolute bottom-[-10px] right-[-10px] w-14 h-4 bg-[#D1C2A5]/90 -rotate-45 shadow-sm" />
+              <div className="relative w-full aspect-square">
+                <Image src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=300&q=80" alt="Chef" fill className="object-cover" />
               </div>
-              <div className="absolute left-24 top-5 bg-white p-2 pb-7 shadow-lg rotate-[3deg] z-20 w-28">
-                <div className="absolute top-[-7px] left-1/2 -translate-x-1/2 w-9 h-3 bg-yellow-200/80 rounded-sm" />
-                <div className="relative w-full h-20">
-                  <Image src="https://picsum.photos/seed/staff2/200/200" alt="Restaurant team" fill className="object-cover" />
-                </div>
+            </div>
+            <div className="absolute left-24 lg:left-32 top-10 bg-white p-3 pb-12 shadow-[0_10px_25px_rgba(0,0,0,0.15)] rotate-[8deg] z-20 w-40 md:w-48 transition-transform hover:z-40 hover:rotate-0">
+              <div className="absolute top-[-10px] left-[-10px] w-14 h-4 bg-[#D1C2A5]/90 -rotate-45 shadow-sm" />
+              <div className="absolute bottom-[-10px] right-[-10px] w-14 h-4 bg-[#D1C2A5]/90 -rotate-45 shadow-sm" />
+              <div className="relative w-full aspect-square">
+                <Image src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=300&q=80" alt="Staff" fill className="object-cover" />
               </div>
             </div>
           </div>

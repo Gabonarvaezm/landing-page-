@@ -2,28 +2,41 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="mx-4 md:mx-10 my-4 relative h-[320px] md:h-[420px] rounded-xl overflow-hidden">
+    <section className="mx-4 md:mx-10 my-6 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden bg-[#222]">
       <Image
         src="/hero_pizza_hands.png"
         alt="Hands reaching for pizza slices on a wooden table"
         fill
-        className="object-cover"
+        className="object-cover opacity-90"
         priority
+        sizes="(max-width: 1200px) 100vw, 1200px"
       />
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-black/10" />
+      
+      {/* Tape top left */}
+      <div className="absolute top-0 left-0 w-32 h-10 bg-[#E5DCC5]/70 -rotate-45 -translate-x-10 translate-y-8 shadow-sm z-10 hidden md:block" />
 
-      {/* Content */}
-      <div className="absolute bottom-8 left-8 md:bottom-10 md:left-10">
-        <h1 className="text-white font-extrabold uppercase leading-tight text-3xl md:text-[2.4rem] mb-3">
-          For Delicious,<br />Made-From<br />Scratch Pizzas
-        </h1>
-        <p className="text-gray-300 text-[0.8rem] mb-5">
-          Fresh ingredients, bold flavors, baked to perfection every time.
-        </p>
+      {/* Content wrapper */}
+      <div className="absolute left-4 top-1/2 -translate-y-1/2 md:left-12 flex flex-col items-start z-10 w-full max-w-[500px]">
+        
+        {/* Torn paper container */}
+        <div 
+          className="bg-[#161616] px-8 py-8 md:px-10 md:py-10 -rotate-1 relative shadow-2xl w-full"
+          style={{
+            clipPath: "polygon(1% 2%, 98% 0%, 100% 25%, 99% 50%, 100% 75%, 98% 100%, 2% 98%, 0% 75%, 1% 50%, 0% 25%)",
+          }}
+        >
+          <h1 className="text-white font-[900] uppercase leading-[1.05] text-[2.2rem] md:text-[3.2rem] tracking-[-1px] mb-3">
+            FOR DELICIOUS,<br />MADE-FROM<br />SCRATCH PIZZAS
+          </h1>
+          <p className="text-[#A0A0A0] text-[0.65rem] md:text-[0.75rem] font-[500]">
+            Nunc id rbi sneale iene inecei accets.
+          </p>
+        </div>
+        
+        {/* Button below the paper */}
         <a
           href="#"
-          className="inline-block bg-[#F47B20] hover:bg-[#d96a10] text-white font-bold text-[0.85rem] px-6 py-2.5 rounded-full transition-colors"
+          className="mt-6 md:mt-8 ml-6 md:ml-10 inline-block bg-[#F47B20] hover:bg-[#d96a10] text-[#FFFFFF] font-[800] text-[0.85rem] px-8 py-3 rounded-[50px] transition-colors shadow-[0_4px_15px_rgba(244,123,32,0.4)] z-20 tracking-wide"
         >
           Order Online
         </a>

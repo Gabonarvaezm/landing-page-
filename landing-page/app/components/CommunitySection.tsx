@@ -52,29 +52,23 @@ const StaffIllustration = () => (
 
 export default function CommunitySection() {
   return (
-    <section className="py-16 px-4 md:px-10">
-      <div className="max-w-[1100px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <section className="bg-transparent flex flex-wrap items-center gap-6 mt-4">
+      {/* Left text */}
+      <div className="flex-1 min-w-[200px]">
+        <h3 className="text-[#1A1A1A] text-[0.8rem] font-[800] mb-2 tracking-wide">
+          @yourbrandhandle
+        </h3>
+        <h2 className="text-[1.1rem] font-[900] uppercase leading-[1.1] mb-2 tracking-[-0.5px]">
+          LET'S WORK TOGETHER<br />FOR OUR COMMUNITY
+        </h2>
+        <p className="text-[0.6rem] text-[#666] leading-relaxed font-[500] pr-4">
+          Us aacis orm nmos ineadtua iarv ant aoerican tasastie pmpaenvretet.
+        </p>
+      </div>
 
-          {/* Left text */}
-          <div>
-            <p className="text-[#F47B20] text-[0.8rem] font-semibold mb-3">@crustpizzaco</p>
-            <h2 className="text-[1.4rem] font-extrabold uppercase leading-tight mb-4">
-              Let&apos;s Work Together<br />For Our Community
-            </h2>
-            <p className="text-[0.8rem] text-[#666] leading-relaxed">
-              We believe in giving back to the neighborhoods that have supported us.
-              From local sponsorships to charity events, Crust Pizza Co. is proud to
-              be a pillar of the community. Join us in making a difference, one slice at a time.
-            </p>
-          </div>
-
-          {/* Right illustration */}
-          <div className="flex justify-center bg-gradient-to-br from-[#fff8f0] to-[#ffe8cc] rounded-xl p-6">
-            <StaffIllustration />
-          </div>
-
-        </div>
+      {/* Right illustration */}
+      <div className="flex justify-center w-[120px] md:w-[150px]">
+        <StaffIllustration />
       </div>
     </section>
   );
